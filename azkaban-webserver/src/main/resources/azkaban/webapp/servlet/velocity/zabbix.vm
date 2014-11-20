@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+#parse("azkaban/webapp/servlet/velocity/style.vm")
+#parse("azkaban/webapp/servlet/velocity/javascript.vm")
+
+        <link rel="stylesheet" type="text/css" href="${context}/css/jquery-ui-1.10.1.custom.css" />
+        <link rel="stylesheet" type="text/css" href="${context}/css/jquery-ui.css" />
+        
+        <script type="text/javascript" src="${context}/js/jqueryui/jquery-ui-1.10.1.custom.js"></script>
+        <script type="text/javascript" src="${context}/js/jqueryui/jquery-ui-timepicker-addon.js"></script> 
+        <script type="text/javascript" src="${context}/js/jqueryui/jquery-ui-sliderAccess.js"></script>
+
+        <script type="text/javascript" src="${context}/js/azkaban/view/table-sort.js"></script>
+        <script type="text/javascript" src="${context}/js/azkaban/view/triggers.js"></script>
+        <script type="text/javascript">
+            var contextURL = "${context}";
+            var currentTime = ${currentTime};
+            var timezone = "${timezone}";
+            var errorMessage = null;
+            var successMessage = null;
+        </script>
+    </head>
+    <body>
+
+    <div class="container-full">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>Hadoop Jobs</h3>
+                <p>
+                    Überprüft ob die Hadoop Jobs korrekt gelaufen sind.
+                </p>
+                <h4>Eskalation:</h4>
+                <p>
+                    Unister-Adserver-Bereitschaft (CPC) wird per SMS benachrichtigt.
+                </p>
+            </div>
+        </div>
+        
+        <br />
+        <div class="row">
+        <div class="col-xs-12">
+          <table id="triggersTbl" class="table table-striped table-bordered table-condensed table-hover">
+            <thead>
+              <tr>
+                <th>Flow Name</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Last Runtime</th>
+                <th>Avg Runtime</th>
+                <th>Max Endtime</th>
+                <th>Next Run</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+            
+            #if ($scheduledFlows)
+                #foreach ($flow in $scheduledFlows)
+                    <tr>
+                        <td>${flow.flowName}</td>
+                        <td>${flow.startTime}</td>
+                        <td>${flow.endTime}</td>
+                        <td>${flow.lastSucceededRuntime}</td>
+                        <td>${flow.averageSucceededRuntime}</td>
+                        <td>${flow.maxSucceededRuntime}</td>
+                        <td>${flow.nextExecutionTime}</td>
+                        <td><div style="color:${flow.statusColor};">${flow.status}</div></td>
+                    </tr>
+                #end
+            #else
+                <tr><td class="last">No trigger for schedules found</td></tr>
+            #end
+                </tbody>
+            </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                #if ($allSucceeded)
+                    <div style="color:green;font-weight:bold">ZABBIX: OK</div>
+                #else
+                    <div style="color:red;font-weight:bold">ZABBIX: ERROR</div>
+                #end
+            </div>
+        </div>
+    </body>
+</html>
+
