@@ -354,21 +354,9 @@ public class ProjectManager {
     logger.info("Uploading files to " + project.getName());
 
     // Unzip.
-    File file = null;
-    try {
-      if (fileType == null) {
-        throw new ProjectManagerException("Unknown file type for "
-            + archive.getName());
-      } else if ("zip".equals(fileType)) {
-        file = unzipFile(archive);
-      } else {
-        throw new ProjectManagerException("Unsupported archive type for file "
-            + archive.getName());
-      }
-    } catch (IOException e) {
-      throw new ProjectManagerException("Error unzipping file.", e);
-    }
+    File file = maybeUnzipFile(archive, fileType);
 
+<<<<<<< HEAD
     // Since props is an instance variable of ProjectManager, and each invocation to the
     // uploadProject manager needs to pass a different value for the PROJECT_ARCHIVE_FILE_PATH
     // key, it is necessary to create a new instance of Props to make sure these different
@@ -395,17 +383,14 @@ public class ProjectManager {
         status = report.getValue().getStatus();
       }
     }
+=======
+    Map<String, ValidationReport> reports = validateProject(archive, file);
+    ValidationStatus status = getValidationStatus(reports);
+>>>>>>> added project validation for project manager servlet
     if (status == ValidationStatus.ERROR) {
       logger.error("Error found in upload to " + project.getName()
           + ". Cleaning up.");
-
-      try {
-        FileUtils.deleteDirectory(file);
-      } catch (IOException e) {
-        file.deleteOnExit();
-        e.printStackTrace();
-      }
-
+      cleanupTempFile(file);
       return reports;
     }
 
@@ -440,12 +425,8 @@ public class ProjectManager {
     logger.info("Uploaded project files. Cleaning up temp files.");
     projectLoader.postEvent(project, EventType.UPLOADED, uploader.getUserId(),
         "Uploaded project files zip " + archive.getName());
-    try {
-      FileUtils.deleteDirectory(file);
-    } catch (IOException e) {
-      file.deleteOnExit();
-      e.printStackTrace();
-    }
+
+    cleanupTempFile(file);
 
     logger.info("Cleaning up old install files older than "
         + (project.getVersion() - projectVersionRetention));
@@ -453,6 +434,39 @@ public class ProjectManager {
         project.getVersion() - projectVersionRetention);
 
     return reports;
+  }
+
+  public Map<String, ValidationReport> validateProject(File archive, String fileType) throws ProjectManagerException {
+    // Unzip.
+    File file = maybeUnzipFile(archive, fileType);
+
+    try {
+      return validateProject(archive, file);
+    } finally {
+      cleanupTempFile(file);
+    }
+  }
+
+  private Map<String, ValidationReport> validateProject(File archive, File tempArchive) throws ProjectManagerException {
+    props.put(PROJECT_ARCHIVE_FILE_PATH, archive.getAbsolutePath());
+    validatorManager.loadValidators(props, logger);
+    logger.info("Validating project " + archive.getName()
+        + " using the registered validators "
+        + validatorManager.getValidatorsInfo().toString());
+
+    return validatorManager.validate(tempArchive);
+  }
+
+  public ValidationStatus getValidationStatus(Map<String, ValidationReport> validationReports) {
+    ValidationStatus status = ValidationStatus.PASS;
+
+    for (Entry<String, ValidationReport> report : validationReports.entrySet()) {
+      if (report.getValue().getStatus().compareTo(status) > 0) {
+        status = report.getValue().getStatus();
+      }
+    }
+
+    return status;
   }
 
   public void updateFlow(Project project, Flow flow)
@@ -473,4 +487,33 @@ public class ProjectManager {
     projectLoader.postEvent(project, type, user, message);
   }
 
+  private File maybeUnzipFile(File archive, String fileType)
+      throws ProjectManagerException {
+    // Unzip.
+    File file = null;
+    try {
+      if (fileType == null) {
+        throw new ProjectManagerException(
+            "Unknown file type for " + archive.getName());
+      } else if ("zip".equals(fileType)) {
+        file = unzipFile(archive);
+      } else {
+        throw new ProjectManagerException(
+            "Unsupported archive type for file " + archive.getName());
+      }
+    } catch (IOException e) {
+      throw new ProjectManagerException("Error unzipping file.", e);
+    }
+
+    return file;
+  }
+
+  private void cleanupTempFile(File file) {
+    try {
+      FileUtils.deleteDirectory(file);
+    } catch (IOException e) {
+      file.deleteOnExit();
+      e.printStackTrace();
+    }
+  }
 }

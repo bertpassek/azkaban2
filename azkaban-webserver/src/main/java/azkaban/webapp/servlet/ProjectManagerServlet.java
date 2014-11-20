@@ -39,6 +39,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import azkaban.project.validator.ValidationStatus;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
@@ -1443,14 +1444,23 @@ public class ProjectManagerServlet extends LoginAbstractAzkabanServlet {
         return;
       }
 
+      String validateUpload = (String) multipart.get("validate");
+      boolean doProjectValidation = validateUpload != null && !validateUpload.isEmpty();
+
       File tempDir = Utils.createTempDir();
       OutputStream out = null;
       try {
-        logger.info("Uploading file " + name);
+        logger.info((doProjectValidation ? "Validating" : "Uploading") + " file " + name);
         File archiveFile = new File(tempDir, name);
         out = new BufferedOutputStream(new FileOutputStream(archiveFile));
         IOUtils.copy(item.getInputStream(), out);
         out.close();
+
+        // check if validation flag is set
+        if (doProjectValidation) {
+          validateProject(archiveFile, type, ret);
+          return;
+        }
 
         Map<String, ValidationReport> reports = projectManager.uploadProject(
             project, archiveFile, type, user);
@@ -1580,5 +1590,32 @@ public class ProjectManagerServlet extends LoginAbstractAzkabanServlet {
     }
 
     return false;
+  }
+
+  private void validateProject(File archiveFile, String type, Map<String, String> ret) throws ProjectManagerException {
+    // check if validation flag is set
+    Map<String, ValidationReport> validationReports = projectManager.validateProject(archiveFile, type);
+
+    StringBuffer message = new StringBuffer();
+    for (Entry<String, ValidationReport> reportEntry : validationReports.entrySet()) {
+      ValidationReport report = reportEntry.getValue();
+      if (!report.getErrorMsgs().isEmpty()) {
+        message.append("Validator " + reportEntry.getKey() + " reports errors:\n");
+        for (String msg : report.getErrorMsgs()) {
+          message.append(msg + "\n");
+        }
+      }
+      if (!report.getWarningMsgs().isEmpty()) {
+        message.append("Validator " + reportEntry.getKey() + " reports warnings:\n");
+        for (String msg : report.getWarningMsgs()) {
+          message.append(msg + "\n");
+        }
+      }
+    }
+    if (message.length() > 0) {
+      ret.put("error", message.toString());
+    } else {
+      ret.put("valid", "true");
+    }
   }
 }
