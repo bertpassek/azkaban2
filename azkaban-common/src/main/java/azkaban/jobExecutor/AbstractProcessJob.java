@@ -161,7 +161,7 @@ public abstract class AbstractProcessJob extends AbstractJob {
   }
 
   public File createFlattenedPropsFile(final String workingDir) {
-    File directory = new File(workingDir);
+    File directory = createTempDir(workingDir);;
     File tempFile = null;
     try {
       // The temp file prefix must be at least 3 characters.
@@ -178,7 +178,7 @@ public abstract class AbstractProcessJob extends AbstractJob {
       final String workingDir) {
     System.err.println("cwd=" + workingDir);
 
-    File directory = new File(workingDir);
+    File directory = createTempDir(workingDir);
     File tempFile = null;
     try {
       tempFile = File.createTempFile(id + "_output_", "_tmp", directory);
@@ -195,4 +195,11 @@ public abstract class AbstractProcessJob extends AbstractJob {
     generatedProperties = loadOutputFileProps(outputFile);
   }
 
+  private static File createTempDir(final String workingDir) {
+    File directory = new File(workingDir + "/temp/azkaban2-tmp");
+    if (!directory.exists()) {
+      directory.mkdirs();
+    }
+    return directory;
+  }
 }

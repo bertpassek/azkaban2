@@ -35,6 +35,7 @@ import javax.management.MBeanInfo;
 import javax.management.MBeanServer;
 import javax.management.ObjectName;
 
+import azkaban.webapp.servlet.*;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.apache.velocity.app.VelocityEngine;
@@ -88,15 +89,6 @@ import azkaban.utils.FileIOUtils;
 import azkaban.utils.Props;
 import azkaban.utils.PropsUtils;
 import azkaban.utils.Utils;
-import azkaban.webapp.servlet.AbstractAzkabanServlet;
-import azkaban.webapp.servlet.ExecutorServlet;
-import azkaban.webapp.servlet.IndexRedirectServlet;
-import azkaban.webapp.servlet.JMXHttpServlet;
-import azkaban.webapp.servlet.ScheduleServlet;
-import azkaban.webapp.servlet.HistoryServlet;
-import azkaban.webapp.servlet.ProjectServlet;
-import azkaban.webapp.servlet.ProjectManagerServlet;
-import azkaban.webapp.servlet.TriggerManagerServlet;
 import azkaban.webapp.plugin.TriggerPlugin;
 import azkaban.webapp.plugin.ViewerPlugin;
 import azkaban.webapp.plugin.PluginRegistry;
@@ -772,6 +764,7 @@ public class AzkabanWebServer extends AzkabanServer {
     root.addServlet(new ServletHolder(new ScheduleServlet()), "/schedule");
     root.addServlet(new ServletHolder(new JMXHttpServlet()), "/jmx");
     root.addServlet(new ServletHolder(new TriggerManagerServlet()), "/triggers");
+    root.addServlet(new ServletHolder(new ZabbixServlet()),"/zabbix");
 
     ServletHolder restliHolder = new ServletHolder(new RestliServlet());
     restliHolder.setInitParameter("resourcePackages", "azkaban.restli");
