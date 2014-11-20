@@ -37,7 +37,7 @@ public class JavaProcessJob extends ProcessJob {
   public static final String DEFAULT_INITIAL_MEMORY_SIZE = "64M";
   public static final String DEFAULT_MAX_MEMORY_SIZE = "256M";
 
-  public static String JAVA_COMMAND = "java";
+  public static String JAVA_COMMAND = "/home/s.luhn/projects/java/jdk1.7.0_65/bin/java";
 
   public JavaProcessJob(String jobid, Props sysProps, Props jobProps,
       Logger logger) {
