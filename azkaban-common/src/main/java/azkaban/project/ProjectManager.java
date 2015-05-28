@@ -356,7 +356,6 @@ public class ProjectManager {
     // Unzip.
     File file = maybeUnzipFile(archive, fileType);
 
-<<<<<<< HEAD
     // Since props is an instance variable of ProjectManager, and each invocation to the
     // uploadProject manager needs to pass a different value for the PROJECT_ARCHIVE_FILE_PATH
     // key, it is necessary to create a new instance of Props to make sure these different
@@ -383,10 +382,7 @@ public class ProjectManager {
         status = report.getValue().getStatus();
       }
     }
-=======
-    Map<String, ValidationReport> reports = validateProject(archive, file);
-    ValidationStatus status = getValidationStatus(reports);
->>>>>>> added project validation for project manager servlet
+
     if (status == ValidationStatus.ERROR) {
       logger.error("Error found in upload to " + project.getName()
           + ". Cleaning up.");
@@ -447,14 +443,26 @@ public class ProjectManager {
     }
   }
 
-  private Map<String, ValidationReport> validateProject(File archive, File tempArchive) throws ProjectManagerException {
-    props.put(PROJECT_ARCHIVE_FILE_PATH, archive.getAbsolutePath());
-    validatorManager.loadValidators(props, logger);
-    logger.info("Validating project " + archive.getName()
-        + " using the registered validators "
-        + validatorManager.getValidatorsInfo().toString());
+  private Map<String, ValidationReport> validateProject(File archive, File file) throws ProjectManagerException {
+      // Since props is an instance variable of ProjectManager, and each invocation to the
+      // uploadProject manager needs to pass a different value for the PROJECT_ARCHIVE_FILE_PATH
+      // key, it is necessary to create a new instance of Props to make sure these different
+      // values are isolated from each other.
+      Props prop = new Props(props);
+      prop.put(PROJECT_ARCHIVE_FILE_PATH, archive.getAbsolutePath());
+      ValidatorManager validatorManager = new XmlValidatorManager(prop);
+      logger.info("Validating project " + archive.getName() + " using the registered validators "
+              + validatorManager.getValidatorsInfo().toString());
+      Map<String, ValidationReport> reports = validatorManager.validate(file);
+      ValidationStatus status = ValidationStatus.PASS;
+      for (Entry<String, ValidationReport> report : reports.entrySet()) {
+          if (report.getValue().getStatus().compareTo(status) > 0) {
+              status = report.getValue().getStatus();
+          }
+      }
 
-    return validatorManager.validate(tempArchive);
+      cleanupTempFile(file);
+      return reports;
   }
 
   public ValidationStatus getValidationStatus(Map<String, ValidationReport> validationReports) {
