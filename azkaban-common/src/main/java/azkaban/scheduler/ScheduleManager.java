@@ -163,6 +163,18 @@ public class ScheduleManager implements TriggerAgent {
     }
   }
 
+  public synchronized void setStatus(int scheduleId, String status) throws ScheduleManagerException
+  {
+    Schedule schedule = getSchedule(scheduleId);
+    if (schedule == null)
+    {
+      return;
+    }
+
+    schedule.setStatus(status.toString());
+    loader.updateSchedule(schedule);
+  }
+
   /**
    * Removes the flow from the schedule if it exists.
    *

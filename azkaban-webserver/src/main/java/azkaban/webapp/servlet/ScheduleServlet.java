@@ -59,6 +59,7 @@ import azkaban.scheduler.ScheduleManagerException;
 import azkaban.server.session.Session;
 import azkaban.server.HttpRequestUtils;
 import azkaban.sla.SlaOption;
+import azkaban.trigger.TriggerStatus;
 import azkaban.user.Permission;
 import azkaban.user.Permission.Type;
 import azkaban.user.User;
@@ -338,8 +339,7 @@ public class ScheduleServlet extends LoginAbstractAzkabanServlet {
       IOException {
 
     Page page =
-        newPage(req, resp, session,
-            "azkaban/webapp/servlet/velocity/scheduledflowpage.vm");
+        newPage(req, resp, session, "azkaban/webapp/servlet/velocity/scheduledflowpage.vm");
 
     List<Schedule> schedules;
     try {
@@ -382,6 +382,8 @@ public class ScheduleServlet extends LoginAbstractAzkabanServlet {
           ajaxScheduleFlow(req, ret, session.getUser());
         } else if (action.equals("removeSched")) {
           ajaxRemoveSched(req, ret, session.getUser());
+        } else if (action.equals("toggleScheduleExecution")) {
+          ajaxToggleScheduleExecution(req, ret, session.getUser());
         }
       }
 
@@ -592,16 +594,70 @@ public class ScheduleServlet extends LoginAbstractAzkabanServlet {
     }
 
     scheduleManager.removeSchedule(sched);
-    logger.info("User '" + user.getUserId() + " has removed schedule "
-        + sched.getScheduleName());
+    logger.info("User '" + user.getUserId() + " has removed schedule " + sched.getScheduleName());
     projectManager
         .postProjectEvent(project, EventType.SCHEDULE, user.getUserId(),
-            "Schedule " + sched.toString() + " has been removed.");
+                "Schedule " + sched.toString() + " has been removed.");
 
     ret.put("status", "success");
-    ret.put("message", "flow " + sched.getFlowName()
-        + " removed from Schedules.");
+    ret.put("message", "flow " + sched.getFlowName() + " removed from Schedules.");
     return;
+  }
+
+  private void ajaxToggleScheduleExecution(HttpServletRequest req, Map<String, Object> ret,
+          User user) throws ServletException {
+    int scheduleId = getIntParam(req, "scheduleId");
+    Schedule schedule;
+    try {
+      schedule = scheduleManager.getSchedule(scheduleId);
+    } catch (ScheduleManagerException e) {
+      throw new ServletException(e);
+    }
+
+    if (schedule == null) {
+      ret.put("message", "Schedule with ID " + scheduleId + " does not exist");
+      ret.put("status", "error");
+      return;
+    }
+
+    Project project = projectManager.getProject(schedule.getProjectId());
+
+    if (project == null) {
+      ret.put("message", "Project " + schedule.getProjectId() + " does not exist");
+      ret.put("status", "error");
+      return;
+    }
+
+    if (!hasPermission(project, user, Type.SCHEDULE)) {
+      ret.put("status", "error");
+      ret.put("message", "Permission denied. Cannot remove schedule with id "
+              + scheduleId);
+      return;
+    }
+
+    try {
+      String triggerStatus = null;
+      if (schedule.getStatus().equals(TriggerStatus.READY.toString()))
+      {
+        triggerStatus = TriggerStatus.PAUSED.toString();
+      }
+      else if (schedule.getStatus().equals(TriggerStatus.PAUSED.toString()))
+      {
+        triggerStatus = TriggerStatus.READY.toString();
+      }
+
+      if (triggerStatus != null)
+      {
+        scheduleManager.setStatus(scheduleId, triggerStatus);
+        ret.put("status", "success");
+        ret.put("message", "status of flow " + schedule.getFlowName() + " successfully set to " + triggerStatus);
+      }
+    }
+    catch (Exception e)
+    {
+      e.printStackTrace();
+      ret.put("error", "Could not toggle ready/paused state for flow " + schedule.getFlowName());
+    }
   }
 
   private void ajaxScheduleFlow(HttpServletRequest req,
@@ -664,7 +720,7 @@ public class ScheduleServlet extends LoginAbstractAzkabanServlet {
 
     Schedule schedule =
         scheduleManager.scheduleFlow(-1, projectId, projectName, flowName,
-            "ready", firstSchedTime.getMillis(), firstSchedTime.getZone(),
+            "READY", firstSchedTime.getMillis(), firstSchedTime.getZone(),
             thePeriod, DateTime.now().getMillis(), firstSchedTime.getMillis(),
             firstSchedTime.getMillis(), user.getUserId(), flowOptions,
             slaOptions);
