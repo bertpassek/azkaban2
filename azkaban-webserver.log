@@ -1,0 +1,11 @@
+2016/04/08 10:53:39.763 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Azkaban Server
+2016/04/08 10:53:39.786 +0200 ERROR [AzkabanWebServer] [Azkaban] Properties not found. Need it to connect to the db.
+2016/04/08 10:53:39.786 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting...
+2016/04/08 10:56:23.583 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Azkaban Server
+2016/04/08 10:56:23.604 +0200 ERROR [AzkabanWebServer] [Azkaban] Properties not found. Need it to connect to the db.
+2016/04/08 10:56:23.605 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting...
+2016/04/08 10:56:41.406 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Azkaban Server
+2016/04/08 10:58:15.777 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Azkaban Server
+2016/04/08 10:58:31.369 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Azkaban Server
+2016/04/08 10:59:04.850 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Azkaban Server
+2016/04/11 15:58:25.402 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Azkaban Server

@@ -1,0 +1,150 @@
+2016/04/11 15:39:01.359 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:39:01.359 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:39:01.380 +0200 INFO [AzkabanServer] [Azkaban] Loading azkaban settings file from azkaban-webserver/src/package
+2016/04/11 15:39:01.380 +0200 ERROR [AzkabanWebServer] [Azkaban] Azkaban Properties not loaded.
+2016/04/11 15:39:01.380 +0200 ERROR [AzkabanWebServer] [Azkaban] Azkaban Properties not loaded.
+2016/04/11 15:39:01.380 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting Azkaban...
+2016/04/11 15:39:01.380 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting Azkaban...
+2016/04/11 15:42:49.510 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:42:49.510 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:42:56.434 +0200 INFO [AzkabanServer] [Azkaban] Loading azkaban settings file from azkaban-webserver/src/package
+2016/04/11 15:42:59.579 +0200 ERROR [AzkabanWebServer] [Azkaban] Azkaban Properties not loaded.
+2016/04/11 15:42:59.579 +0200 ERROR [AzkabanWebServer] [Azkaban] Azkaban Properties not loaded.
+2016/04/11 15:43:01.643 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting Azkaban...
+2016/04/11 15:43:01.643 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting Azkaban...
+2016/04/11 15:43:24.461 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:43:24.461 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:43:24.482 +0200 INFO [AzkabanServer] [Azkaban] Loading azkaban settings file from azkaban-webserver/src/package
+2016/04/11 15:43:24.483 +0200 ERROR [AzkabanWebServer] [Azkaban] Azkaban Properties not loaded.
+2016/04/11 15:43:24.483 +0200 ERROR [AzkabanWebServer] [Azkaban] Azkaban Properties not loaded.
+2016/04/11 15:43:24.483 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting Azkaban...
+2016/04/11 15:43:24.483 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting Azkaban...
+2016/04/11 15:43:39.989 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:43:39.989 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:44:15.239 +0200 INFO [AzkabanServer] [Azkaban] Loading azkaban settings file from azkaban-webserver/src/package
+2016/04/11 15:44:51.809 +0200 ERROR [AzkabanWebServer] [Azkaban] Azkaban Properties not loaded.
+2016/04/11 15:44:51.809 +0200 ERROR [AzkabanWebServer] [Azkaban] Azkaban Properties not loaded.
+2016/04/11 15:44:51.810 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting Azkaban...
+2016/04/11 15:44:51.810 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting Azkaban...
+2016/04/11 15:45:20.205 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:45:20.205 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:45:20.227 +0200 INFO [AzkabanServer] [Azkaban] Loading azkaban settings file from azkaban-webserver/src/package/conf
+2016/04/11 15:45:20.227 +0200 INFO [AzkabanServer] [Azkaban] Loading azkaban properties file
+2016/04/11 15:45:20.228 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up connector with stats on: true
+2016/04/11 15:45:20.228 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up connector with stats on: true
+2016/04/11 15:45:20.237 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up Jetty Https Server with port:8443 and numThreads:25
+2016/04/11 15:45:20.237 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up Jetty Https Server with port:8443 and numThreads:25
+2016/04/11 15:45:20.254 +0200 INFO [AzkabanWebServer] [Azkaban] Excluded Cipher Suites: [SSL_RSA_WITH_DES_CBC_SHA, SSL_DHE_RSA_WITH_DES_CBC_SHA, SSL_DHE_DSS_WITH_DES_CBC_SHA, SSL_RSA_EXPORT_WITH_RC4_40_MD5, SSL_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA]
+2016/04/11 15:45:20.254 +0200 INFO [AzkabanWebServer] [Azkaban] Excluded Cipher Suites: [SSL_RSA_WITH_DES_CBC_SHA, SSL_DHE_RSA_WITH_DES_CBC_SHA, SSL_DHE_DSS_WITH_DES_CBC_SHA, SSL_RSA_EXPORT_WITH_RC4_40_MD5, SSL_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA]
+2016/04/11 15:45:20.332 +0200 INFO [AzkabanWebServer] [Azkaban] Loading user manager class azkaban.user.XmlUserManager
+2016/04/11 15:45:20.332 +0200 INFO [AzkabanWebServer] [Azkaban] Loading user manager class azkaban.user.XmlUserManager
+2016/04/11 15:45:20.332 +0200 ERROR [AzkabanWebServer] [Azkaban] Could not instantiate UserManager azkaban.user.XmlUserManager
+2016/04/11 15:45:20.332 +0200 ERROR [AzkabanWebServer] [Azkaban] Could not instantiate UserManager azkaban.user.XmlUserManager
+2016/04/11 15:45:49.781 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:45:49.781 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:45:49.814 +0200 INFO [AzkabanServer] [Azkaban] Loading azkaban settings file from azkaban-webserver/src/package/conf
+2016/04/11 15:45:49.814 +0200 INFO [AzkabanServer] [Azkaban] Loading azkaban properties file
+2016/04/11 15:45:49.816 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up connector with stats on: true
+2016/04/11 15:45:49.816 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up connector with stats on: true
+2016/04/11 15:45:49.825 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up Jetty Https Server with port:8443 and numThreads:25
+2016/04/11 15:45:49.825 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up Jetty Https Server with port:8443 and numThreads:25
+2016/04/11 15:45:49.841 +0200 INFO [AzkabanWebServer] [Azkaban] Excluded Cipher Suites: [SSL_RSA_WITH_DES_CBC_SHA, SSL_DHE_RSA_WITH_DES_CBC_SHA, SSL_DHE_DSS_WITH_DES_CBC_SHA, SSL_RSA_EXPORT_WITH_RC4_40_MD5, SSL_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA]
+2016/04/11 15:45:49.841 +0200 INFO [AzkabanWebServer] [Azkaban] Excluded Cipher Suites: [SSL_RSA_WITH_DES_CBC_SHA, SSL_DHE_RSA_WITH_DES_CBC_SHA, SSL_DHE_DSS_WITH_DES_CBC_SHA, SSL_RSA_EXPORT_WITH_RC4_40_MD5, SSL_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA]
+2016/04/11 15:45:49.944 +0200 INFO [AzkabanWebServer] [Azkaban] Loading user manager class azkaban.user.XmlUserManager
+2016/04/11 15:45:49.944 +0200 INFO [AzkabanWebServer] [Azkaban] Loading user manager class azkaban.user.XmlUserManager
+2016/04/11 15:45:49.945 +0200 ERROR [AzkabanWebServer] [Azkaban] Could not instantiate UserManager azkaban.user.XmlUserManager
+2016/04/11 15:45:49.945 +0200 ERROR [AzkabanWebServer] [Azkaban] Could not instantiate UserManager azkaban.user.XmlUserManager
+2016/04/11 15:46:42.662 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:46:42.662 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:46:42.681 +0200 INFO [AzkabanServer] [Azkaban] Conf parameter not set, attempting to get value from AZKABAN_HOME env.
+2016/04/11 15:46:42.683 +0200 ERROR [AzkabanServer] [Azkaban] AZKABAN_HOME not set. Will try default.
+2016/04/11 15:46:42.683 +0200 ERROR [AzkabanWebServer] [Azkaban] Azkaban Properties not loaded.
+2016/04/11 15:46:42.683 +0200 ERROR [AzkabanWebServer] [Azkaban] Azkaban Properties not loaded.
+2016/04/11 15:46:42.683 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting Azkaban...
+2016/04/11 15:46:42.683 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting Azkaban...
+2016/04/11 15:46:48.141 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:46:48.141 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:46:48.159 +0200 INFO [AzkabanServer] [Azkaban] Conf parameter not set, attempting to get value from AZKABAN_HOME env.
+2016/04/11 15:46:48.161 +0200 ERROR [AzkabanServer] [Azkaban] AZKABAN_HOME not set. Will try default.
+2016/04/11 15:46:48.161 +0200 ERROR [AzkabanWebServer] [Azkaban] Azkaban Properties not loaded.
+2016/04/11 15:46:48.161 +0200 ERROR [AzkabanWebServer] [Azkaban] Azkaban Properties not loaded.
+2016/04/11 15:46:48.161 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting Azkaban...
+2016/04/11 15:46:48.161 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting Azkaban...
+2016/04/11 15:49:42.885 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:49:42.885 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:49:42.906 +0200 INFO [AzkabanServer] [Azkaban] Conf parameter not set, attempting to get value from AZKABAN_HOME env.
+2016/04/11 15:49:42.907 +0200 ERROR [AzkabanServer] [Azkaban] AZKABAN_HOME not set. Will try default.
+2016/04/11 15:49:42.908 +0200 ERROR [AzkabanWebServer] [Azkaban] Azkaban Properties not loaded.
+2016/04/11 15:49:42.908 +0200 ERROR [AzkabanWebServer] [Azkaban] Azkaban Properties not loaded.
+2016/04/11 15:49:42.908 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting Azkaban...
+2016/04/11 15:49:42.908 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting Azkaban...
+2016/04/11 15:50:44.206 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:50:44.206 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:50:44.228 +0200 INFO [AzkabanServer] [Azkaban] Loading azkaban settings file from azkaban-webserver/src/package/conf
+2016/04/11 15:50:44.228 +0200 ERROR [AzkabanServer] [Azkaban] Conf directory azkaban-webserver/src/package/conf doesn't exist.
+2016/04/11 15:50:44.228 +0200 ERROR [AzkabanWebServer] [Azkaban] Azkaban Properties not loaded.
+2016/04/11 15:50:44.228 +0200 ERROR [AzkabanWebServer] [Azkaban] Azkaban Properties not loaded.
+2016/04/11 15:50:44.228 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting Azkaban...
+2016/04/11 15:50:44.228 +0200 ERROR [AzkabanWebServer] [Azkaban] Exiting Azkaban...
+2016/04/11 15:51:08.749 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:51:08.749 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:51:08.771 +0200 INFO [AzkabanServer] [Azkaban] Loading azkaban settings file from src/package/conf
+2016/04/11 15:51:08.771 +0200 INFO [AzkabanServer] [Azkaban] Loading azkaban properties file
+2016/04/11 15:51:08.772 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up connector with stats on: true
+2016/04/11 15:51:08.772 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up connector with stats on: true
+2016/04/11 15:51:08.781 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up Jetty Https Server with port:8443 and numThreads:25
+2016/04/11 15:51:08.781 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up Jetty Https Server with port:8443 and numThreads:25
+2016/04/11 15:51:08.798 +0200 INFO [AzkabanWebServer] [Azkaban] Excluded Cipher Suites: [SSL_RSA_WITH_DES_CBC_SHA, SSL_DHE_RSA_WITH_DES_CBC_SHA, SSL_DHE_DSS_WITH_DES_CBC_SHA, SSL_RSA_EXPORT_WITH_RC4_40_MD5, SSL_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA]
+2016/04/11 15:51:08.798 +0200 INFO [AzkabanWebServer] [Azkaban] Excluded Cipher Suites: [SSL_RSA_WITH_DES_CBC_SHA, SSL_DHE_RSA_WITH_DES_CBC_SHA, SSL_DHE_DSS_WITH_DES_CBC_SHA, SSL_RSA_EXPORT_WITH_RC4_40_MD5, SSL_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA]
+2016/04/11 15:51:08.876 +0200 INFO [AzkabanWebServer] [Azkaban] Loading user manager class azkaban.user.XmlUserManager
+2016/04/11 15:51:08.876 +0200 INFO [AzkabanWebServer] [Azkaban] Loading user manager class azkaban.user.XmlUserManager
+2016/04/11 15:51:08.877 +0200 ERROR [AzkabanWebServer] [Azkaban] Could not instantiate UserManager azkaban.user.XmlUserManager
+2016/04/11 15:51:08.877 +0200 ERROR [AzkabanWebServer] [Azkaban] Could not instantiate UserManager azkaban.user.XmlUserManager
+2016/04/11 15:55:02.007 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:55:02.007 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:55:02.028 +0200 INFO [AzkabanServer] [Azkaban] Loading azkaban settings file from conf
+2016/04/11 15:55:02.029 +0200 INFO [AzkabanServer] [Azkaban] Loading azkaban properties file
+2016/04/11 15:55:02.030 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up connector with stats on: true
+2016/04/11 15:55:02.030 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up connector with stats on: true
+2016/04/11 15:55:02.040 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up Jetty Https Server with port:8443 and numThreads:25
+2016/04/11 15:55:02.040 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up Jetty Https Server with port:8443 and numThreads:25
+2016/04/11 15:55:02.056 +0200 INFO [AzkabanWebServer] [Azkaban] Excluded Cipher Suites: [SSL_RSA_WITH_DES_CBC_SHA, SSL_DHE_RSA_WITH_DES_CBC_SHA, SSL_DHE_DSS_WITH_DES_CBC_SHA, SSL_RSA_EXPORT_WITH_RC4_40_MD5, SSL_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA]
+2016/04/11 15:55:02.056 +0200 INFO [AzkabanWebServer] [Azkaban] Excluded Cipher Suites: [SSL_RSA_WITH_DES_CBC_SHA, SSL_DHE_RSA_WITH_DES_CBC_SHA, SSL_DHE_DSS_WITH_DES_CBC_SHA, SSL_RSA_EXPORT_WITH_RC4_40_MD5, SSL_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA]
+2016/04/11 15:55:02.163 +0200 INFO [AzkabanWebServer] [Azkaban] Loading user manager class azkaban.user.XmlUserManager
+2016/04/11 15:55:02.163 +0200 INFO [AzkabanWebServer] [Azkaban] Loading user manager class azkaban.user.XmlUserManager
+2016/04/11 15:55:02.197 +0200 INFO [XmlUserManager] [Azkaban] Loading user azkaban
+2016/04/11 15:55:02.197 +0200 INFO [XmlUserManager] [Azkaban] Loading user metrics
+2016/04/11 15:55:02.232 +0200 INFO [ExecutorManager] [Azkaban] Initializing local executor localhost:12321
+2016/04/11 15:55:02.387 +0200 ERROR [DataSourceUtils] [Azkaban] MySQL connection test failed. Please check MySQL connection health!
+2016/04/11 15:55:32.395 +0200 ERROR [DataSourceUtils] [Azkaban] MySQL connection test failed. Please check MySQL connection health!
+2016/04/11 15:56:02.402 +0200 ERROR [DataSourceUtils] [Azkaban] MySQL connection test failed. Please check MySQL connection health!
+2016/04/11 15:56:07.731 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:56:07.731 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:56:07.752 +0200 INFO [AzkabanServer] [Azkaban] Loading azkaban settings file from conf
+2016/04/11 15:56:07.752 +0200 INFO [AzkabanServer] [Azkaban] Loading azkaban properties file
+2016/04/11 15:56:07.754 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up connector with stats on: true
+2016/04/11 15:56:07.754 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up connector with stats on: true
+2016/04/11 15:56:07.763 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up Jetty Https Server with port:8443 and numThreads:25
+2016/04/11 15:56:07.763 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up Jetty Https Server with port:8443 and numThreads:25
+2016/04/11 15:56:07.779 +0200 INFO [AzkabanWebServer] [Azkaban] Excluded Cipher Suites: [SSL_RSA_WITH_DES_CBC_SHA, SSL_DHE_RSA_WITH_DES_CBC_SHA, SSL_DHE_DSS_WITH_DES_CBC_SHA, SSL_RSA_EXPORT_WITH_RC4_40_MD5, SSL_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA]
+2016/04/11 15:56:07.779 +0200 INFO [AzkabanWebServer] [Azkaban] Excluded Cipher Suites: [SSL_RSA_WITH_DES_CBC_SHA, SSL_DHE_RSA_WITH_DES_CBC_SHA, SSL_DHE_DSS_WITH_DES_CBC_SHA, SSL_RSA_EXPORT_WITH_RC4_40_MD5, SSL_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA]
+2016/04/11 15:56:07.858 +0200 INFO [AzkabanWebServer] [Azkaban] Loading user manager class azkaban.user.XmlUserManager
+2016/04/11 15:56:07.858 +0200 INFO [AzkabanWebServer] [Azkaban] Loading user manager class azkaban.user.XmlUserManager
+2016/04/11 15:56:07.881 +0200 INFO [XmlUserManager] [Azkaban] Loading user azkaban
+2016/04/11 15:56:07.882 +0200 INFO [XmlUserManager] [Azkaban] Loading user metrics
+2016/04/11 15:56:07.918 +0200 INFO [ExecutorManager] [Azkaban] Initializing local executor localhost:12321
+2016/04/11 15:57:24.525 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:57:24.525 +0200 INFO [AzkabanWebServer] [Azkaban] Starting Jetty Azkaban Web Server...
+2016/04/11 15:57:24.546 +0200 INFO [AzkabanServer] [Azkaban] Loading azkaban settings file from conf
+2016/04/11 15:57:24.546 +0200 INFO [AzkabanServer] [Azkaban] Loading azkaban properties file
+2016/04/11 15:57:24.548 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up connector with stats on: true
+2016/04/11 15:57:24.548 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up connector with stats on: true
+2016/04/11 15:57:24.557 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up Jetty Https Server with port:8443 and numThreads:25
+2016/04/11 15:57:24.557 +0200 INFO [AzkabanWebServer] [Azkaban] Setting up Jetty Https Server with port:8443 and numThreads:25
+2016/04/11 15:57:24.573 +0200 INFO [AzkabanWebServer] [Azkaban] Excluded Cipher Suites: [SSL_RSA_WITH_DES_CBC_SHA, SSL_DHE_RSA_WITH_DES_CBC_SHA, SSL_DHE_DSS_WITH_DES_CBC_SHA, SSL_RSA_EXPORT_WITH_RC4_40_MD5, SSL_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA]
+2016/04/11 15:57:24.573 +0200 INFO [AzkabanWebServer] [Azkaban] Excluded Cipher Suites: [SSL_RSA_WITH_DES_CBC_SHA, SSL_DHE_RSA_WITH_DES_CBC_SHA, SSL_DHE_DSS_WITH_DES_CBC_SHA, SSL_RSA_EXPORT_WITH_RC4_40_MD5, SSL_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA]
+2016/04/11 15:57:24.651 +0200 INFO [AzkabanWebServer] [Azkaban] Loading user manager class azkaban.user.XmlUserManager
+2016/04/11 15:57:24.651 +0200 INFO [AzkabanWebServer] [Azkaban] Loading user manager class azkaban.user.XmlUserManager
+2016/04/11 15:57:24.677 +0200 INFO [XmlUserManager] [Azkaban] Loading user azkaban
+2016/04/11 15:57:24.677 +0200 INFO [XmlUserManager] [Azkaban] Loading user metrics
+2016/04/11 15:57:24.713 +0200 INFO [ExecutorManager] [Azkaban] Initializing local executor localhost:12321
