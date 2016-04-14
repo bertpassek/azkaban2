@@ -157,6 +157,15 @@ public class TriggerManager extends EventHandler implements
       runnerThread.deleteTrigger(triggerIdMap.get(t.getTriggerId()));
       runnerThread.addTrigger(t);
       triggerIdMap.put(t.getTriggerId(), t);
+
+      try
+      {
+        triggerLoader.updateTrigger(t);
+      }
+      catch (TriggerLoaderException e)
+      {
+        throw new TriggerManagerException(e);
+      }
     }
   }
 
@@ -432,7 +441,7 @@ public class TriggerManager extends EventHandler implements
   @Override
   public void updateTrigger(Trigger t, String user)
       throws TriggerManagerException {
-    updateTrigger(t);
+      updateTrigger(t);
   }
 
   @Override

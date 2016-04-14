@@ -178,6 +178,10 @@ public class Schedule {
     return status;
   }
 
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
   public long getSubmitTime() {
     return submitTime;
   }
@@ -347,5 +351,4 @@ public class Schedule {
   public boolean skipPastOccurrences() {
     return skipPastOccurrences;
   }
-
 }

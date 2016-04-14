@@ -30,6 +30,7 @@ import azkaban.trigger.TriggerAction;
 import azkaban.trigger.TriggerManager;
 import azkaban.trigger.TriggerManagerAdapter;
 import azkaban.trigger.TriggerManagerException;
+import azkaban.trigger.TriggerStatus;
 import azkaban.trigger.builtin.BasicTimeChecker;
 import azkaban.trigger.builtin.ExecuteFlowAction;
 
@@ -58,6 +59,10 @@ public class TriggerBasedScheduleLoader implements ScheduleLoader {
         new Trigger(s.getScheduleId(), s.getLastModifyTime(),
             s.getSubmitTime(), s.getSubmitUser(), triggerSource,
             triggerCondition, expireCondition, actions);
+
+    if (s.getStatus() != null) {
+      t.setStatus(TriggerStatus.valueOf(s.getStatus()));
+    }
     if (s.isRecurring()) {
       t.setResetOnTrigger(true);
     } else {

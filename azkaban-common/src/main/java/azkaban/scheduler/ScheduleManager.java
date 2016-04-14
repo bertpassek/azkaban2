@@ -163,6 +163,18 @@ public class ScheduleManager implements TriggerAgent {
     }
   }
 
+  public synchronized void setStatus(int scheduleId, String status) throws ScheduleManagerException
+  {
+    Schedule schedule = getSchedule(scheduleId);
+    if (schedule == null)
+    {
+      return;
+    }
+
+    schedule.setStatus(status.toString());
+    loader.updateSchedule(schedule);
+  }
+
   /**
    * Removes the flow from the schedule if it exists.
    *
@@ -230,17 +242,10 @@ public class ScheduleManager implements TriggerAgent {
    * @param flow
    */
   public synchronized void insertSchedule(Schedule s) {
-    Schedule exist = scheduleIdentityPairMap.get(s.getScheduleIdentityPair());
     if (s.updateTime()) {
       try {
-        if (exist == null) {
           loader.insertSchedule(s);
           internalSchedule(s);
-        } else {
-          s.setScheduleId(exist.getScheduleId());
-          loader.updateSchedule(s);
-          internalSchedule(s);
-        }
       } catch (ScheduleManagerException e) {
         e.printStackTrace();
       }

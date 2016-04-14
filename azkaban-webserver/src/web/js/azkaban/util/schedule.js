@@ -32,6 +32,24 @@ function removeSched(scheduleId) {
   $.post(scheduleURL, requestData, successHandler, "json");
 }
 
+function toggleScheduleExecution(scheduleId) {
+  var scheduleURL = contextURL + "/schedule"
+  var redirectURL = contextURL + "/schedule"
+  var requestData = {
+    "action": "toggleScheduleExecution",
+    "scheduleId":scheduleId
+  };
+  var successHandler = function(data) {
+    if (data.error) {
+      $('#errorMsg').text(data.error);
+    }
+    else {
+      window.location = redirectURL;
+    }
+  };
+  $.post(scheduleURL, requestData, successHandler, "json");
+}
+
 function removeSla(scheduleId) {
   var scheduleURL = contextURL + "/schedule"
   var redirectURL = contextURL + "/schedule"
